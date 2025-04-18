@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .items{
+        background-color: rgb(245, 194, 101);
+        color: white;
+        width: 100px;
+        height: 50px;
+        
+
+    }
+    .container{
+        display: flex;
+        gap: 0px 20px;
+        border: 2px solid black;
+        height: 300px;
+        width: 1000px;
+        flex-direction: row;
+        
+    }
+    .four{
+        /* order property=for changing the order of the items */
+        order: -1;
+        flex-grow: 1;
+        align-self: center;
+        flex-shrink: 3;
+    }
+    .five{
+        flex-grow: 1;
+        align-self: flex-end;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="items one">item1</div>
+        <div class="items two">item2</div>
+        <div class="items three">item3</div>
+        <div class="items four">item4</div>
+        <div class="items five">item5</div>
+    </div>
+</body>
+</html>

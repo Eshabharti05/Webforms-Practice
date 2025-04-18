@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* in this boxmodel we will learn 
+        (height/width/border/padding/margin)
+        */
+        div{
+            height: 100px;
+            background-color: pink;
+            width: 100px;
+            /* border-width: 2px;
+            border-style: solid/dotted/dashed;
+            border-color: chocolate; */
+            border: 10px solid chocolate;
+            
+        }
+        h1{
+            height: 50px;
+            width: 150px;
+            background-color: pink;
+            border: 3px dashed black;
+            text-align: center;
+            font-family: Courier;
+        }
+        #one{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            border: 10px solid chocolate;
+
+            /* by doing border radius 50% it will become 'circle' if height&width are same */
+            border-radius: 50%;
+            padding: 50px;
+
+
+            /* margin is the space between two content */
+
+            /* margin-->top right bottom left  */
+            margin: 50px 10px 30px 45px;
+
+
+        }
+        #two{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            border: 1px solid chocolate;
+            /* border radius will curve the corners */
+            border-radius: 9px;
+            text-align: center;
+            /* when you want same px values all the sides */
+            padding: 50px;
+            margin: 50px;
+
+        }
+        #the{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            border: 10px solid chocolate;
+
+            /* padding is the space between content and border */
+            
+            
+            /* padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 25px;
+            padding-bottom: 25px; */
+
+            /* top right bottom left->clockwise direction */
+            padding: 50px 40px 30px 60px;
+            
+
+        }
+
+
+    </style>
+</head>
+<body>
+   
+    <h1>heading</h1>
+    <p>hello esha you are beautiful and sweet.god bless you with lots of money</p>
+    <button>click me</button>
+   
+   <div>
+    this is div
+   </div>
+   <br>
+   <div id="one">div1</div><br>
+   <div id="two">div2</div><br>
+   <div id="the">div3</div>
+   
+
+   
+</body> 
+</html>

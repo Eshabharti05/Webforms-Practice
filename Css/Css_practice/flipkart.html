@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/css/all.css">
+</head>
+<style>
+    .container{
+        display: flex;
+        border: 2px solid #FBFCF8;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: #FBFCF8;
+
+    }
+    /* Dropdown Button */
+.dropbtn {
+  background-color: #FBFCF8;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+
+a{
+    text-decoration: none;
+    color: black;
+    padding: 35px;
+    margin-left: 15px;
+    font-size: 15px;
+    
+}
+input{
+    padding: 10px;
+    margin-top: 11px;
+    margin-bottom: 10px;
+    width: 350px;
+    border: 1px solid #f1f1f1;
+    background-color: #F0F8FF;
+    border-radius: 10px;
+
+}
+h1{
+    margin: 0px;
+    padding: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #007FFF;
+    font-style: oblique;
+}
+
+
+
+</style>
+<body>
+    <nav class="container">
+        <div class="items">
+            <h1>Flipkart</h1>
+            <span style="font-weight: bold; font-style: initial;">Explore <span style="color: orange; font-weight: bold; font-style: initial;">Plus +</span></span>
+        </div>
+        <div class="items">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search for Products, Brands and More">
+        </div>
+        
+        <div class="it">
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-circle-user"></i> Login</button>
+                <div class="dropdown-content">
+                  <a href="#" style="color: #007FFF;">Sign Up</a>
+                  <a href="#"><i class="fa-regular fa-user"></i>  My Profile</a>
+                  <a href="#"><i class="fa-solid fa-plus"></i>  Flipkart Plus Zone</a>
+                  <a href="#"><i class="fa-solid fa-box"></i>  Orders</a>
+                  <a href="#"><i class="fa-regular fa-heart"></i>  Wishlist</a>
+                  <a href="#"><i class="fa-solid fa-gift"></i>  Rewards</a>
+                  <a href="#"><i class="fa-solid fa-wallet"></i>  Gift Cards</a>
+                </div>
+            </div>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i>  Card</a>
+            <a href="#"><i class="fa-solid fa-shop"></i>  Become a Seller</a>
+        </div>
+    </nav>
+</body>
+</html>

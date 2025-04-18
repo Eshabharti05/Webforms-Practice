@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        
+        button{
+            background-color: beige;
+            display: block;
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            margin:25px;
+            background-color: pink;
+            border: 5px solid black;
+            padding: 25px;
+            /* if here you are using 'inline' property then you cant able to modify 
+            the height and width of content as well as margin-top is not added */
+            display: inline-block;
+        }
+        #box2{
+            /* this is used to remove the elements from the webpage.it will not appear on web page */
+            display: none;
+        }
+        #box3{
+            /* heree on website you can see the vacated space  */
+            visibility: hidden;
+
+        }  
+    </style> 
+</head>
+<body>
+    
+    <!-- block-Takes full space available in width.eg=div,h1-->
+    
+     
+     <!-- inline-takes only the space required by the element.eg=span,button -->
+     <button>click me</button>
+    <!-- inline-block - similar to inline but we can set margin and padding -->
+     <!-- none-to remove element from documnet flow -->
+
+
+    <h1>heading</h1>
+
+    <div>box1</div>
+    <div id="box2">box2</div>
+    <div id="box3">box3</div>
+    <div>box5</div>
+
+
+    <!-- visibility:hidden -->
+     
+     <!-- when visibility is set to 'none', space for 
+      the elemnet is reserved.
+      but for display set to none,
+      no space is reserved or block for the element -->
+
+    
+
+</body>
+</html>

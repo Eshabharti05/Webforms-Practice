@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* relative css----(percentage/Em/rem/vh/vw)       */
+
+    /* for percentage */
+    /* #one{
+        background-color: green;
+        height: 100px;
+        width: 200px;
+    }
+    #two{
+        background-color: skyblue;
+        height: 50px;
+        width: 30%;
+        margin-left: 10%;
+    } */
+
+
+    /* for em */
+    #one{
+        background-color: green;
+        height: 100px;
+        width: 200px;
+    }
+    #two{
+        background-color: skyblue;
+        height: 50px;
+        
+        margin-left: 10%;
+        /* two times of parent font-size */
+        font-size: 2em;
+        /* it will take its own width */
+        width: 5em;
+    }
+
+
+
+
+
+
+
+    
+    /* rem=font-size of the root element */
+    /* #two{
+        width: 5rem;
+    } */
+
+
+
+    /* vh: relative to 1% viewport of height */
+    /*iska matlab ye hai ki browser ki jo height hai uska 1% height-1vh  */
+
+    /* #two{
+       
+        height: 100vh;
+    } */
+
+
+
+
+    /* vw: relative to 1% viewport width */
+    /*iska matlab ye hai ki browser ki jo width hai uska 1% width-1vw  */
+    /* #two{
+       
+       width:  1vw;
+   }  */
+
+
+</style>
+<body>
+    
+    <div id="one">box1
+        <div id="two">box2</div>
+    </div>
+</body>
+</html>

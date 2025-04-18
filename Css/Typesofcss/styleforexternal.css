@@ -1,0 +1,13 @@
+h1{
+    background-color: rgb(170, 238, 33);
+    width: fit-content;
+    padding: 10px 10px 10px 10px;
+    border: 10px solid purple;
+    margin: 5px 5px 5px 5px ;
+}
+h2{
+    background-color: aquamarine;
+    width: fit-content;
+    color: rgb(27, 99, 162);
+    margin: 10px;
+}
