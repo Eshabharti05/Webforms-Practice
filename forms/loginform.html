@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        border: 2px solid black;
+        text-align: center;
+        padding: 50px ;
+        width: 300px;
+        
+        margin: 200px auto;
+        border-radius: 20px;
+        background-image: url(https://img.freepik.com/free-photo/view-spectacular-nature-landscape_23-2150763636.jpg);
+        border: 2px solid white;
+        box-shadow: 0px 0px 20px white;
+    
+        
+    }
+
+    
+    input::placeholder{
+        color: white;
+        border: none;
+        font-size: 20px;
+        text-align: center;
+        
+        
+    }
+    .child{
+        margin-bottom: 20px;
+
+
+    }
+    input{
+        width: 250px;
+        height: 35px;
+        border: none;
+        
+        background: transparent;
+        text-decoration: underline dotted white;
+    }
+    button{
+        padding: 10px;
+        border-radius: 10px;
+        font-size: medium;
+        box-shadow: 0px 0px 10px white;
+        border: 1px solid white;
+    }
+    body{
+        background-image: url(https://img.freepik.com/free-photo/view-spectacular-nature-landscape_23-2150763636.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+       
+    }
+</style>
+<body>
+    <form action="">
+        <div class="parent">
+            <div class="child">
+                <input type="text" placeholder="Enter the Username">
+            </div>
+            <div class="child">
+                <input type="text" placeholder="Enter the password">
+            </div>
+            <div class="child">
+                <input type="text" placeholder="Re-enter the password">
+            </div>
+            <div class="child">
+                <button>Submit</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

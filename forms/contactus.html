@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .child{
+        border: 2px solid black;
+        margin: 200px auto;
+        width: 400px;
+    }
+    #one,#two{
+        width: 350px;
+        margin-left: 10px;
+        height: 30px;
+    }
+    #the{
+        margin-left: 10px;
+        height: 30px;
+    }
+    .child{
+        padding: 25px;
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+    }
+    h2{
+        text-align: center;
+        margin-top: 2px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight:lighter;
+
+    }
+    span{
+        color: red;
+    }
+    button{
+        margin: 25px;
+        padding: 10px;
+        border-radius: 50px;
+        width: 100px;
+        color: white;
+        background-color: red;
+    }
+    .container{
+        margin:50px;
+        border: 2px solid black;
+        background: linear-gradient(90deg, rgb(87, 3, 87),purple, blue);
+    }
+    
+    #we{
+        height: 30px;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <div class="child">
+            <h2>Contact Us</h2>
+            <table>
+                
+                <tbody>
+                    <tr>
+                        <td><label for="">Full Name <span>*</span></label></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" placeholder="First Name" id="the"></td>
+                        <td><input type="text" placeholder="Last Name" id="we"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Email<span>*</span></label></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" ><input type="email" placeholder="Email" id="one"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="" >Leave us a few words <span>*</span></label></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" ><textarea name="" id="two"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><button>Submit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

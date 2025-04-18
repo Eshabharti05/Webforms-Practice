@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block_inline level elements</title>
+</head>
+<style>
+    .child{
+        background-color: purple;
+        height: 100px;
+        width: 100px;
+        margin-bottom: 10px;
+        color: white;
+        display: inline-block;
+
+    }
+    #one{
+        /* display:none is used when we dont want show that particular thingb on web page.it will not leave space for that element */
+        /* display:none; */
+        visibility: hidden;
+    }
+    a{
+        color: white;
+        background-color: black;
+        display: block;
+
+    }
+    
+</style>
+<body>
+    <h1 >Jspiders</h1>
+    <!-- the elements which occupies 100% width of the web page are known as block level elements.eg-div,nav,all heading tag-->
+     <!-- the elements which occupies content level space are known as inline elements. eg-label,input,anchor,span,button,bold,italic,etc-->
+    
+
+
+
+    <!-- Display properties -->
+     <!-- display:inline== if you want to convert from block level elements to inline elements we will use this property.If 
+      we use this property height and width properties will not work -->
+     <!-- display:inline-block==by using this property we can convert block level elements to inline elements with height & width properties  -->
+    <div class="container">
+        <div class="child">Item-1</div>
+        <div class="child" id="one">Item-2</div>
+        <div class="child">Item-3</div>
+        <div class="child">Item-4</div>
+        
+    </div>
+    <!-- display:block==is used to convert inline elements to block level elements -->
+    <div class="parent">
+        <a href="">Home</a>
+        <a href="">Placement</a>
+        <a href="">Batches</a>
+        <a href="">Courses</a>
+    </div>
+
+</body>
+</html>

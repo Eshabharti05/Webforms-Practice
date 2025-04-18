@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function main(){
+            // let d1=new Date();
+            // let day=d1.getDay();
+            // console.log(day);
+
+            let d1 = new Date();
+            let day=d1.getDay();
+            let str="transaction happened on ";
+            if (day==0) str+="Sunday";
+            else if (day==1) str+="Monday";
+            else if (day==2) str+="Tuesday";
+            else if (day==3) str+="Wednesday";
+            else if (day==4) str+="Thursday";
+            else if (day==5) str+="Friday";
+            else if (day==6) str+="Satur7uday";
+            else console.log("invalid input")
+
+            console.log(str);
+
+           let year=2001
+           let month=prompt("enter month")
+           switch(month){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+                console.log("31 days");
+                break;
+            case 4:
+            case 9:
+            case 6:
+            case 11:
+                console.log("30 days");
+                break;
+            case 2:
+                if ((year%400==0) || (year%4==0 && year%100!=0))
+                    console.log("29 Days");
+                else console.log("28 days");
+                break;
+            default:
+                console.log("invalid month");
+
+
+
+           }
+
+
+
+
+
+
+        }
+        main();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

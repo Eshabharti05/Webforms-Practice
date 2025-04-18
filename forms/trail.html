@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabbed Interface</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        /* Default tab link styles */
+.nav-tabs .nav-link {
+    color: #004085; /* Deep blue text */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover background colors */
+.nav-tabs .nav-link:hover {
+    background-color: #cce5ff; /* Light Blue */
+    color: #000;
+    border-radius: 5px;
+}
+
+/* Active tab styling */
+.nav-tabs .nav-link.active {
+    background-color: #cce5ff; /* Soft Yellow */
+    color: #000 ;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container mt-4">
+    <!-- Tab navigation -->
+    <ul class="nav nav-tabs" id="myTabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#plantLine">Plant & Line</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#rawWeight">Raw Weight</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#sponge">Sponge</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#dough">Dough</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#oven">Oven</a>
+        </li>
+    </ul>
+
+    <!-- Tab content -->
+    <div class="tab-content mt-3">
+        <div class="tab-pane fade show active" id="plantLine">
+            <h4>Plant & Line</h4>
+            <p>Verification details for Plant & Line.</p>
+        </div>
+        <div class="tab-pane fade" id="rawWeight">
+            <h4>Raw Weight</h4>
+            <p>Verification details for Raw Weight.</p>
+        </div>
+        <div class="tab-pane fade" id="sponge">
+            <h4>Sponge</h4>
+            <p>Verification details for Sponge.</p>
+        </div>
+        <div class="tab-pane fade" id="dough">
+            <h4>Dough</h4>
+            <p>Verification details for Dough.</p>
+        </div>
+        <div class="tab-pane fade" id="oven">
+            <h4>Oven</h4>
+            <p>Verification details for Oven.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

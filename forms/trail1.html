@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housekeeping Audit (5S)</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Housekeeping Audit (5S)</h2>
+
+        <!-- Audit Information -->
+        <div class="form-group">
+            <label>Location:</label>
+            <input type="text" id="location" placeholder="Enter location">
+        </div>
+
+        <div class="form-group">
+            <label>Date:</label>
+            <input type="date" id="auditDate">
+        </div>
+
+        <hr>
+
+        <!-- Observations Table -->
+        <h3>Observations</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl No</th>
+                    <th>Before (Photo)</th>
+                    <th>Observation</th>
+                    <th>Corrective Action</th>
+                    <th>After (Photo)</th>
+                </tr>
+            </thead>
+            <tbody id="observationTable">
+                <!-- Dynamic rows will be inserted here -->
+            </tbody>
+        </table>
+
+        <hr>
+
+        <!-- Add New Observation -->
+        <h3>Add New Observation</h3>
+        <div class="form-group">
+            <label>Before (Photo):</label>
+            <input type="file" id="beforePhoto">
+        </div>
+
+        <div class="form-group">
+            <label>Observation:</label>
+            <textarea id="observationText" placeholder="Enter observation"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Corrective Action:</label>
+            <textarea id="correctiveAction" placeholder="Enter corrective action"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>After (Photo):</label>
+            <input type="file" id="afterPhoto">
+        </div>
+
+        <button class="btn" onclick="saveAudit()">Save Audit</button>
+        <button class="btn" onclick="addObservation()">Add Observation</button>
+    </div>
+
+<script>
+    function saveAudit() {
+    const location = document.getElementById("location").value;
+    const auditDate = document.getElementById("auditDate").value;
+
+    if (!location || !auditDate) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    const auditData = {
+        location: location,
+        auditDate: auditDate
+    };
+
+    fetch('http://localhost:5000/save-audit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(auditData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert("Audit saved successfully!");
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+   }
+   function addObservation() {
+    const observationText = document.getElementById("observationText").value;
+    const correctiveAction = document.getElementById("correctiveAction").value;
+    const beforePhotoInput = document.getElementById("beforePhoto");
+    const afterPhotoInput = document.getElementById("afterPhoto");
+
+    const beforePhoto = beforePhotoInput.files[0];
+    const afterPhoto = afterPhotoInput.files[0];
+
+    if (!observationText || !correctiveAction || !beforePhoto || !afterPhoto) {
+        alert("Please fill in all fields and select images.");
+        return;
+    }
+
+    const readerBefore = new FileReader();
+    const readerAfter = new FileReader();
+
+    readerBefore.readAsDataURL(beforePhoto);
+    readerAfter.readAsDataURL(afterPhoto);
+
+    readerBefore.onload = function () {
+        readerAfter.onload = function () {
+            const newRow = `
+                <tr>
+                    <td>${document.getElementById("observationTable").rows.length + 1}</td>
+                    <td><img src="${readerBefore.result}" width="100"></td>
+                    <td>${observationText}</td>
+                    <td>${correctiveAction}</td>
+                    <td><img src="${readerAfter.result}" width="100"></td>
+                </tr>
+            `;
+
+            document.getElementById("observationTable").innerHTML += newRow;
+
+            // ✅ Clear all input fields after adding observation
+            document.getElementById("observationText").value = "";
+            document.getElementById("correctiveAction").value = "";
+            beforePhotoInput.value = "";
+            afterPhotoInput.value = "";
+
+            alert("Observation added successfully!");
+        };
+    };
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
